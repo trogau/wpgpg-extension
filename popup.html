@@ -1,0 +1,59 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Signet</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 500px;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+	<script src="kbpgp-2.0.8-min.js"></script>
+	
+  </head>
+  <body>
+    <img id="image-result" hidden>
+	<!--form>
+		<textarea id="signbox" cols="70" rows="10">
+		</textarea>
+		
+		<input type="button" value="Test sign" id="btn_testsign">
+	</form-->
+	
+	<form>
+		<b>Enter your ASCII-armoured private key here.</b><br />
+		<textarea id="privatekey" cols="70" rows="5"></textarea>
+		<br />
+		<b>Enter your key passphrase here:</b>
+		<input type="password" id="passphrase" cols="70" rows="5"></textarea>
+		<br />
+		<input type="button" value="Save key" id="btn_savekey">
+		
+		<input type="button" value="Clear Private Key" id="btn_clearkey">
+	</form>
+	
+    <br /><hr /><br /><div id="status"></div>
+		
+  </body>
+</html>
+

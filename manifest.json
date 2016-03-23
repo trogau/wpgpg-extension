@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "wpgpg Decrypter",
+  "description": "Decrypt GPG-encrypted WordPress output.",
+  "version": "0.1",
+
+  "content_scripts": [
+	{
+		"matches": ["<all_urls>"],
+		"js": ["kbpgp-2.0.8-min.js", "content.js"]
+	}
+  ],
+  "browser_action": {
+    "default_icon": "wpgpg.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+	"storage"
+  ], 
+  "background": {
+	"scripts": ["kbpgp-2.0.8-min.js"], 
+	"persistent": false
+  }
+}
