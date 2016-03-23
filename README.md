@@ -23,4 +23,5 @@ It is not recommended to use this with any 'real' GPG keys, unless you're pretty
 7. Load your WordPress site running wpgpg. It should present as a basic plain page with a chunk of ASCII-armoured GPG, with a 'decrypt' button on top.
 8. Press the 'decrypt' button! It should think for a second, then the page should be replaced with the correct HTML. 
 
+# Notes
 
