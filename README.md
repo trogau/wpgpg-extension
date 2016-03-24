@@ -9,7 +9,7 @@ It is not recommended to use this with any 'real' GPG keys, unless you're pretty
 
 ## Requirements
 
-- WordPress plugin wpgpg (https://github.com/trogau/wpgp), configured and activated with the GPG public key 
+- WordPress plugin wpgpg (https://github.com/trogau/wpgpg), configured and activated with the GPG public key 
 - The private key you'd need to decrypt stuff encrypted with the above key
 
 ## What to do
